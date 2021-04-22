@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-left">
+      <p><%= link_to "Create", new_article_path %></p>
+      <ul class="list-unstyled articles">
+        <% @articles.each do |article| %>
+          <li class="article-list">
+            <h5><%= link_to article.title, article_path(article) %></h5>
+            <p><%= article.content %></p>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
